@@ -39,21 +39,21 @@ watch-dark:
 	@echo "==> Watching $(SRC) (dark theme)..."
 	typst watch $(TYPST_FLAGS) --input theme=dark $(SRC) $(PDF_DARK)
 
-## previews: Generate PNG preview images for all pages in both themes
-previews:
+## previews: Export PDFs and convert their pages into PNG demo images
+previews: $(PDF_LIGHT) $(PDF_DARK)
 	@mkdir -p $(ASSETS_DIR)
-	@rm -f $(ASSETS_DIR)/preview-*.png
-	@echo "==> Exporting light theme PNG previews..."
-	typst compile $(TYPST_FLAGS) --format png $(SRC) "$(ASSETS_DIR)/preview-light-{p}.png"
-	@echo "==> Exporting dark theme PNG previews..."
-	typst compile $(TYPST_FLAGS) --input theme=dark --format png $(SRC) "$(ASSETS_DIR)/preview-dark-{p}.png"
-	@echo "==> Previews generated in $(ASSETS_DIR)/"
+	@rm -f $(ASSETS_DIR)/demo-*.png $(ASSETS_DIR)/preview-*.png
+	@echo "==> Converting $(PDF_LIGHT) pages to PNG demo images..."
+	pdftoppm -png -r 150 $(PDF_LIGHT) $(ASSETS_DIR)/demo-light-page
+	@echo "==> Converting $(PDF_DARK) pages to PNG demo images..."
+	pdftoppm -png -r 150 $(PDF_DARK) $(ASSETS_DIR)/demo-dark-page
+	@echo "==> Demo previews generated in $(ASSETS_DIR)/"
 
 ## clean: Remove compiled PDFs, preview images, and temporary files
 clean:
 	@echo "==> Cleaning generated build files..."
 	@rm -f $(PDF_LIGHT) $(PDF_DARK)
-	@rm -f $(ASSETS_DIR)/preview-*.png
+	@rm -f $(ASSETS_DIR)/demo-*.png $(ASSETS_DIR)/preview-*.png
 	@echo "==> Clean complete."
 
 ## help: Display this help message
@@ -64,6 +64,6 @@ help:
 	@echo "  make dark       - Build dark theme document"
 	@echo "  make watch      - Live watch & recompile light theme on save"
 	@echo "  make watch-dark - Live watch & recompile dark theme on save"
-	@echo "  make previews   - Export PNG preview images of all pages"
+	@echo "  make previews   - Export PDFs and convert pages into PNG demo images"
 	@echo "  make clean      - Remove generated PDFs and PNG preview images"
 	@echo "  make help       - Show this help message"

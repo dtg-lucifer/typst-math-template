@@ -6,6 +6,7 @@ A modern, highly modular document template for [Typst](https://typst.app/), craf
 
 ## Table of Contents
 
+- [Visual Demos & PDF Downloads](#visual-demos--pdf-downloads)
 - [Overview & Visual Identity](#overview--visual-identity)
 - [Quick Start](#quick-start)
 - [Automation & Makefile](#automation--makefile)
@@ -19,6 +20,52 @@ A modern, highly modular document template for [Typst](https://typst.app/), craf
   - [7. Table of Contents & Navigation](#7-table-of-contents--navigation)
   - [8. Math Shortcuts & Macro Helpers](#8-math-shortcuts--macro-helpers)
 - [Theming & Colors](#theming--colors)
+
+---
+
+## Visual Demos & PDF Downloads
+
+You can download or view the fully compiled documents directly:
+- 📄 **[Download Light Theme PDF (`output.pdf`)](output.pdf)**
+- 📄 **[Download Dark Theme PDF (`output-dark.pdf`)](output-dark.pdf)**
+
+Below is a visual showcase of the compiled pages in both **Light** and **Dark** themes:
+
+### 1. Cover Page & Table of Contents
+
+| Light Theme | Dark Theme |
+|:---:|:---:|
+| **Page 1: Title & Abstract** | **Page 1: Title & Abstract** |
+| ![Light Cover Page](assets/demo-light-page-1.png) | ![Dark Cover Page](assets/demo-dark-page-1.png) |
+| **Page 2: Charlie's Table of Contents (Clickable Links)** | **Page 2: Charlie's Table of Contents (Clickable Links)** |
+| ![Light Table of Contents](assets/demo-light-page-2.png) | ![Dark Table of Contents](assets/demo-dark-page-2.png) |
+
+### 2. Mathematical Environments & Theorems
+
+| Light Theme | Dark Theme |
+|:---:|:---:|
+| **Page 3: Definitions (Tab Badges) & Examples (Teal Frame)** | **Page 3: Definitions (Tab Badges) & Examples (Teal Frame)** |
+| ![Light Math Definitions](assets/demo-light-page-3.png) | ![Dark Math Definitions](assets/demo-dark-page-3.png) |
+| **Page 4: Theorems, Continuations, Lemmas & Claims** | **Page 4: Theorems, Continuations, Lemmas & Claims** |
+| ![Light Theorems & Proofs](assets/demo-light-page-4.png) | ![Dark Theorems & Proofs](assets/demo-dark-page-4.png) |
+
+### 3. Rivet Suite, Questions & Solutions
+
+| Light Theme | Dark Theme |
+|:---:|:---:|
+| **Page 5: Questions, Solutions & Full Rivet Suite (Note, Tip, Info, Warning, Caution)** | **Page 5: Questions, Solutions & Full Rivet Suite (Note, Tip, Info, Warning, Caution)** |
+| ![Light Rivet Suite](assets/demo-light-page-5.png) | ![Dark Rivet Suite](assets/demo-dark-page-5.png) |
+
+### 4. Code Blocks, Consoles & Typography
+
+| Light Theme | Dark Theme |
+|:---:|:---:|
+| **Page 6: Epigraph, Centered Quotes & SFMono Codeblocks** | **Page 6: Epigraph, Centered Quotes & SFMono Codeblocks** |
+| ![Light Codeblocks](assets/demo-light-page-6.png) | ![Dark Codeblocks](assets/demo-dark-page-6.png) |
+| **Page 7: Terminal Console, LaTeX Blocks & Circled Lists** | **Page 7: Terminal Console, LaTeX Blocks & Circled Lists** |
+| ![Light Terminal](assets/demo-light-page-7.png) | ![Dark Terminal](assets/demo-dark-page-7.png) |
+| **Page 8: Universal Callouts & Admonition Styles** | **Page 8: Universal Callouts & Admonition Styles** |
+| ![Light Callouts](assets/demo-light-page-8.png) | ![Dark Callouts](assets/demo-dark-page-8.png) |
 
 ---
 
@@ -115,7 +162,7 @@ make watch
 # Live preview / auto-recompile on file save (Dark theme)
 make watch-dark
 
-# Export PNG preview images of every page into assets/
+# Export PDFs and convert pages into PNG demo images in assets/
 make previews
 
 # Delete generated PDFs, preview images, and temporary files

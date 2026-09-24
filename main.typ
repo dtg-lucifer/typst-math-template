@@ -23,11 +23,15 @@
 
 #dfn("Vector Spaces", tag: "1.19 in the book")[
   A vector space (over a field $bbF$) is a set $V$ together with an operation of addition:
-  $ V times V &arrow.r V \
-    (arrow(u), arrow(v)) &arrow.bar.r arrow(u) + arrow(v) $
+  $
+               V times V & arrow.r V \
+    (arrow(u), arrow(v)) & arrow.bar.r arrow(u) + arrow(v)
+  $
   and scalar multiplication:
-  $ bbF times V &arrow.r V \
-    (lambda, arrow(v)) &arrow.bar.r lambda arrow(v) $
+  $
+           bbF times V & arrow.r V \
+    (lambda, arrow(v)) & arrow.bar.r lambda arrow(v)
+  $
 
   Satisfying the following properties:
   #set enum(numbering: circled-num)
@@ -97,9 +101,11 @@
   $ dim(V) = dim(null(T)) + dim(range(T)) $
 
   Recall question 2: Can there be a surjective linear map $T : V |-> W$ if $dim(V) < dim(W)$? No by 3.24. $dim(V) < dim(W)$ then
-  $ dim(range(T)) &<= dim(V) - dim(null(T)) \
-                  &<= dim(V) < dim(W) \
-                  &"range " T != W, "thus " T "is not surjective." $
+  $
+    dim(range(T)) & <= dim(V) - dim(null(T)) \
+                  & <= dim(V) < dim(W) \
+                  & "range " T != W, "thus " T "is not surjective."
+  $
 ]
 
 #thmcon[
@@ -224,18 +230,18 @@ def rank_nullity(A: np.ndarray) -> tuple[int, int]:
     n = A.shape[1]
     rank = np.linalg.matrix_rank(A)
     nullity = n - rank
-    return rank, nullity"
+    return rank, nullity",
 )
 
 #plaincodeblock(
   "// Plain code snippet without line numbers
-const double EPSILON = 1e-9;"
+const double EPSILON = 1e-9;",
 )
 
 #consoleblock(
   title: "bash - compilation workflow",
   cmd: "make build\nmake dark\nmake previews",
-  output: [✓ Light & dark PDFs compiled successfully in 72ms]
+  output: [✓ Light & dark PDFs compiled successfully in 72ms],
 )
 
 Inline code example: #codeinline[rank_nullity(A)].
@@ -296,5 +302,5 @@ Configure `#show: document-template.with(theme: "dark")` or use the Makefile tar
     )[
       In dark mode, the rivet card maintains subtle contrast without glowing or oversaturated colors.
     ]
-  }
+  },
 )

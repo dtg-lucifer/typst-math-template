@@ -36,36 +36,36 @@ Below is a visual showcase of the compiled pages in both **Light** and **Dark** 
 | Light Theme | Dark Theme |
 |:---:|:---:|
 | **Page 1: Title & Abstract** | **Page 1: Title & Abstract** |
-| ![Light Cover Page](assets/demo-light-page-1.png) | ![Dark Cover Page](assets/demo-dark-page-1.png) |
+| ![Light Cover Page](assets/preview/demo-light-page-1.png) | ![Dark Cover Page](assets/preview/demo-dark-page-1.png) |
 | **Page 2: Charlie's Table of Contents (Clickable Links)** | **Page 2: Charlie's Table of Contents (Clickable Links)** |
-| ![Light Table of Contents](assets/demo-light-page-2.png) | ![Dark Table of Contents](assets/demo-dark-page-2.png) |
+| ![Light Table of Contents](assets/preview/demo-light-page-2.png) | ![Dark Table of Contents](assets/preview/demo-dark-page-2.png) |
 
 ### 2. Mathematical Environments & Theorems
 
 | Light Theme | Dark Theme |
 |:---:|:---:|
 | **Page 3: Definitions (Tab Badges) & Examples (Teal Frame)** | **Page 3: Definitions (Tab Badges) & Examples (Teal Frame)** |
-| ![Light Math Definitions](assets/demo-light-page-3.png) | ![Dark Math Definitions](assets/demo-dark-page-3.png) |
+| ![Light Math Definitions](assets/preview/demo-light-page-3.png) | ![Dark Math Definitions](assets/preview/demo-dark-page-3.png) |
 | **Page 4: Theorems, Continuations, Lemmas & Claims** | **Page 4: Theorems, Continuations, Lemmas & Claims** |
-| ![Light Theorems & Proofs](assets/demo-light-page-4.png) | ![Dark Theorems & Proofs](assets/demo-dark-page-4.png) |
+| ![Light Theorems & Proofs](assets/preview/demo-light-page-4.png) | ![Dark Theorems & Proofs](assets/preview/demo-dark-page-4.png) |
 
 ### 3. Rivet Suite, Questions & Solutions
 
 | Light Theme | Dark Theme |
 |:---:|:---:|
 | **Page 5: Questions, Solutions & Full Rivet Suite (Note, Tip, Info, Warning, Caution)** | **Page 5: Questions, Solutions & Full Rivet Suite (Note, Tip, Info, Warning, Caution)** |
-| ![Light Rivet Suite](assets/demo-light-page-5.png) | ![Dark Rivet Suite](assets/demo-dark-page-5.png) |
+| ![Light Rivet Suite](assets/preview/demo-light-page-5.png) | ![Dark Rivet Suite](assets/preview/demo-dark-page-5.png) |
 
 ### 4. Code Blocks, Consoles & Typography
 
 | Light Theme | Dark Theme |
 |:---:|:---:|
 | **Page 6: Epigraph, Centered Quotes & SFMono Codeblocks** | **Page 6: Epigraph, Centered Quotes & SFMono Codeblocks** |
-| ![Light Codeblocks](assets/demo-light-page-6.png) | ![Dark Codeblocks](assets/demo-dark-page-6.png) |
+| ![Light Codeblocks](assets/preview/demo-light-page-6.png) | ![Dark Codeblocks](assets/preview/demo-dark-page-6.png) |
 | **Page 7: Terminal Console, LaTeX Blocks & Circled Lists** | **Page 7: Terminal Console, LaTeX Blocks & Circled Lists** |
-| ![Light Terminal](assets/demo-light-page-7.png) | ![Dark Terminal](assets/demo-dark-page-7.png) |
+| ![Light Terminal](assets/preview/demo-light-page-7.png) | ![Dark Terminal](assets/preview/demo-dark-page-7.png) |
 | **Page 8: Universal Callouts & Admonition Styles** | **Page 8: Universal Callouts & Admonition Styles** |
-| ![Light Callouts](assets/demo-light-page-8.png) | ![Dark Callouts](assets/demo-dark-page-8.png) |
+| ![Light Callouts](assets/preview/demo-light-page-8.png) | ![Dark Callouts](assets/preview/demo-dark-page-8.png) |
 
 ---
 
@@ -162,7 +162,7 @@ make watch
 # Live preview / auto-recompile on file save (Dark theme)
 make watch-dark
 
-# Export PDFs and convert pages into PNG demo images in assets/
+# Export PDFs and convert pages into PNG demo images in assets/preview/
 make previews
 
 # Delete generated PDFs, preview images, and temporary files

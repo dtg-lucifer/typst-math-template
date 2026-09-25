@@ -58,14 +58,14 @@
             fill: p.text-muted,
             size: 8pt,
             font: header-font,
-            if title != none { title } else { [] }
+            if title != none { title } else { [] },
           ),
           text(
             fill: p.text-muted,
             size: 8pt,
             font: header-font,
-            if subtitle != none { subtitle } else { [] }
-          )
+            if subtitle != none { subtitle } else { [] },
+          ),
         )
         v(-2pt)
         line(length: 100%, stroke: 0.4pt + p.border)
@@ -94,7 +94,7 @@
   show raw: set text(font: mono-font)
 
   set par(
-    justify: true,
+    justify: false,
     leading: 0.72em,
     spacing: 1.1em,
   )
@@ -110,7 +110,7 @@
         weight: "bold",
         size: 18pt,
         font: font,
-        it
+        it,
       )
       v(8pt)
     } else if it.level == 2 {
@@ -120,7 +120,7 @@
         weight: "bold",
         size: 13pt,
         font: font,
-        it
+        it,
       )
       v(6pt)
     } else if it.level == 3 {
@@ -130,7 +130,7 @@
         weight: "bold",
         size: 11pt,
         font: font,
-        it
+        it,
       )
       v(4pt)
     } else {
@@ -169,7 +169,7 @@
           size: 26pt,
           weight: "bold",
           font: font,
-          title
+          title,
         )
 
         #if subtitle != none [
@@ -178,7 +178,7 @@
             fill: p.text-muted,
             size: 13pt,
             style: "italic",
-            subtitle
+            subtitle,
           )
         ]
 
@@ -192,7 +192,7 @@
               author.join("   •   ")
             } else {
               author
-            }
+            },
           )
         ]
 
@@ -205,7 +205,7 @@
               datetime.today().display("[month repr:long] [day], [year]")
             } else {
               date
-            }
+            },
           )
         ]
       ]
@@ -223,7 +223,7 @@
               #text(weight: "bold", size: 9.5pt, fill: p.accent)[Abstract]
               #v(4pt)
               #text(size: 9pt, fill: p.text, style: "italic", abstract)
-            ]
+            ],
           )
         ]
       }
@@ -244,7 +244,7 @@
               #text(weight: "bold", size: 9pt, fill: p.accent)[Abstract]
               #v(4pt)
               #text(size: 9pt, fill: p.text, style: "italic", abstract)
-            ]
+            ],
           )
         ]
         v(16pt)

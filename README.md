@@ -9,6 +9,11 @@ A modern, highly modular document template for [Typst](https://typst.app/), craf
 - [Visual Demos & PDF Downloads](#visual-demos--pdf-downloads)
 - [Overview & Visual Identity](#overview--visual-identity)
 - [Quick Start](#quick-start)
+  - [1. Prerequisites](#1-prerequisites)
+  - [2. 3-Step Instant Setup (Under 10 Seconds)](#2-3-step-instant-setup-under-10-seconds)
+  - [3. Minimal Document Starter](#3-minimal-document-starter)
+  - [4. Project Structure (What to Edit)](#4-project-structure-what-to-edit)
+  - [5. VS Code / Tinymist Setup (Optional)](#5-vs-code--tinymist-setup-optional)
 - [Automation & Makefile](#automation--makefile)
 - [Component Reference Guide](#component-reference-guide)
   - [1. Mathematical & Academic Blocks](#1-mathematical--academic-blocks)
@@ -91,9 +96,46 @@ This template matches Charlie's LaTeX template directly:
 
 ## Quick Start
 
-### Minimal Document Example
+### 1. Prerequisites
 
-Create your document (e.g. `main.typ`):
+You only need [Typst](https://typst.app/) installed. All custom fonts (**SFMono Nerd Font** and **Roboto**) are already pre-bundled in `assets/fonts/` — no system font installation needed!
+
+| Platform / Tool | Command |
+|---|---|
+| **macOS (Homebrew)** | `brew install typst` |
+| **Arch Linux** | `sudo pacman -S typst` |
+| **Ubuntu / Debian** | `sudo apt install typst` *(or via cargo)* |
+| **Rust / Cargo** | `cargo install --locked typst-cli` |
+| **Windows (winget)** | `winget install --id Typst.Typst` |
+| **Direct Binary** | Download from [Typst Releases](https://github.com/typst/typst/releases) |
+
+---
+
+### 2. 3-Step Instant Setup (Under 10 Seconds)
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/dtg-lucifer/typst-math-template.git my-document
+   cd my-document
+   ```
+
+2. **Start live previewing with auto-reload on save:**
+   ```bash
+   make watch
+   ```
+   *(Or without `make`: `typst watch --font-path assets/fonts main.typ output.pdf`)*
+
+3. **Start writing:**
+   Open `main.typ` in your editor, start typing your notes, and watch `output.pdf` update instantly on every save!
+
+> [!TIP]
+> Want to build the full PDF once? Just run `make build` (light) or `make dark` (dark).
+
+---
+
+### 3. Minimal Document Starter
+
+Here is a ready-to-copy minimal template to jumpstart your document:
 
 ```typst
 #import "prelude.typ": *
@@ -138,6 +180,31 @@ Create your document (e.g. `main.typ`):
 #pf[
   By openness of $V$, there exists $r > 0$ with $B_r (x) subset.eq V$. Setting $delta = r / 2 > 0$ yields the result.
 ]
+```
+
+---
+
+### 4. Project Structure (What to Edit)
+
+| File / Directory | Description |
+|---|---|
+| 📝 **`main.typ`** | **Your main document** — this is where you write your text, equations, and sections. |
+| 📦 **`prelude.typ`** | Central import file. Import everything with `#import "prelude.typ": *`. |
+| 🎨 **`template.typ`** | Global document layout, cover page styling, running headers/footers, and Charlie's TOC. |
+| 🧩 **`components/`** | Modular environment files (`academic.typ`, `callouts.typ`, `lists.typ`, `macros.typ`, `quotes.typ`, `code.typ`). |
+| 🔤 **`assets/fonts/`** | Pre-bundled fonts (`SFMono Nerd Font` for code/terminals, `Roboto` for headers). |
+| ⚙️ **`Makefile`** | Convenient build automation commands (`make`, `make watch`, `make dark`, etc.). |
+
+---
+
+### 5. VS Code / Tinymist Setup (Optional)
+
+If you use VS Code with the popular [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) extension, configure the font path in your `.vscode/settings.json` so the in-editor live preview and LSP resolve bundled fonts automatically:
+
+```json
+{
+  "tinymist.fontPaths": ["assets/fonts"]
+}
 ```
 
 ---
